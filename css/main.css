@@ -1,0 +1,616 @@
+/*FONT SELECTIOn
+
+font-family: bree-serif,serif;
+font-weight: 400;
+font-style: normal;
+
+font-family: bree-serif,serif;
+font-weight: 700;
+font-style: normal;
+
+font-family: bree-serif,serif;
+font-weight: 300;
+font-style: normal;
+
+font-family: bree-serif,serif;
+font-weight: 700;
+font-style: italic;
+
+font-family: bree-serif,serif;
+font-weight: 400;
+font-style: italic;
+
+font-family: bree-serif,serif;
+font-weight: 300;
+font-style: italic;*/
+
+
+
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  height:100vh;
+  display:grid;
+  grid-template-columns:1fr;
+  grid-template-rows:repeat(3,auto);
+}
+
+/*HEADER SECTION*/
+
+header{
+  grid-row:1;
+  background-image:url(../img/woodgrain.svg);
+  object-fit:cover;
+  background-size:cover;
+  background-repeat:no-repeat;
+  height:9rem;
+  padding:0;
+  margin:0;
+}
+
+.logo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height:auto;
+  width:45rem;
+  padding-bottom: 6rem;
+  padding-top:0;
+}
+
+/*MAIN SECTION*/
+
+main{
+  grid-row:2;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  grid-template-rows:1fr;
+  background-image: url(../img/ArizonaBikePark.png);
+  object-fit:cover;
+  background-size:cover;
+  background-repeat:no-repeat;
+  text-align:center;
+  align-self:center;
+  color:white;
+}
+
+
+.content{
+  grid-column:1;
+  display:grid;
+  grid-template-rows:repeat(10,auto);
+  background-image:url(../img/sign.svg);
+  background-position:0px 30px;
+  width:40rem;
+  height:40rem;
+  margin:3rem;
+}
+
+.container{
+  grid-column:1;
+  grid-row:1;
+  position:fixed;
+  justify-self:center;
+  align-self:center;
+}
+
+.open{
+  margin: auto;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-style: solid;
+  border-width:1.5rem;
+  border-radius:1.5rem;
+  border-color:#46A383;
+  opacity:0;
+  animation-name: fadein;
+  animation-duration:1s;
+  animation-fill-mode: forwards;
+  transition:all;
+}
+
+.open .breathe{
+  grid-column:1;
+  grid-row:1;
+  font-family: bree-serif,serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size:3rem;
+  margin:1rem;
+  padding:2rem;
+  color:white;
+  text-align:center;
+  align-self:center;
+  animation-name:breathing;
+  animation-duration:7s;
+  animation-iteration-count:infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+
+.open .confirm-message{
+  grid-column:1;
+  grid-row:2;
+  font-family: bree-serif,serif;
+  font-weight: 300;
+  font-size:1.5rem;
+  font-style: normal;
+  text-align:center;
+  color:white;
+  padding:1rem;
+}
+
+.open .confirm-message-2{
+  grid-column:1;
+  grid-row:3;
+  font-family: bree-serif,serif;
+  font-weight: 300;
+  font-size:1rem;
+  font-style: normal;
+  text-align:center;
+  align-self:flex-end;
+  color:white;
+  padding-right:1rem;
+  padding-left:1rem;
+}
+
+.open .confirm-message-3{
+  grid-column:1;
+  grid-row:4;
+  font-family: bree-serif,serif;
+  font-weight: 300;
+  font-size:1rem;
+  font-style: normal;
+  text-align:center;
+  align-self:flex-end;
+  color:white;
+  padding-bottom:1rem;
+}
+
+.confirm-message-2 span{
+  display:inline-block;
+}
+
+.welcome-message{
+  grid-column:1;
+  grid-row:4;
+  font-family: bree-serif,serif;
+  font-weight: 400;
+  font-style: normal;
+  align-self:center;
+  margin:-10rem;
+  padding:0;
+}
+
+.welcome-info{
+  grid-column:1;
+  grid-row:5;
+  font-family: bree-serif,serif;
+  font-weight: 300;
+  font-style: normal;
+  align-self:center;
+  margin:-5rem;
+  padding:0;
+}
+
+.form{
+  grid-column:1;
+  grid-row:6;
+}
+
+.form-input{
+  font-family: bree-serif,serif;
+  font-weight: 400;
+  font-style: normal;
+  align-self:center;
+  margin:0;
+  padding:0;
+}
+
+.form-button{
+  font-family: bree-serif,serif;
+  font-weight: 400;
+  font-style: normal;
+  grid-row:6;
+  align-self:center;
+  margin:.5rem;
+  padding:0;
+}
+
+
+
+/*FOOTER SECTION*/
+
+footer{
+  grid-row:3;
+  height:100%;
+  background-image:url(../img/woodgrain.svg);
+  background-position:0px -10px;
+  object-fit:cover;
+  background-size:cover;
+  background-repeat:no-repeat;
+  height:6rem;
+  display:grid;
+  grid-template-columns:1fr auto;
+  grid-template-rows:auto;
+  margin:0;
+  justify-content: center;
+}
+
+.copyright{
+  grid-column:1;
+  grid-row:1;
+  align-self:center;
+  color:white;
+  font-size:1.5rem;
+  margin-left:1.5rem;
+  font-family: bree-serif,serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.socials{
+  grid-column:2;
+  grid-row:1;
+  display:grid;
+  grid-template-columns:repeat(4,auto);
+  grid-gap:1.5rem;
+  list-style-type:none;
+  color:#F28B50;
+  text-align:center;
+  font-size:3rem;
+  padding-right:1.5rem;
+  margin:0;
+}
+
+li{
+  display:inline-block;
+  line-height:.5rem;
+  margin-top:2rem;
+}
+
+
+@keyframes breathing{
+  0%{
+    transform:scale(1.0);
+  }
+  60%{
+    transform:scale(1.5);
+  }
+  100%{
+    transform:scale(1.0);
+  }
+}
+
+
+@keyframes fadein{
+  0%{
+    opacity:0;
+    transform:translateY(-4rem);
+  }
+  100%{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
